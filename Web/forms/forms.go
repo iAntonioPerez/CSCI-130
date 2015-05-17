@@ -27,5 +27,6 @@ func login(w http.ResponseWriter, r *http.Request) {
 
 func info(w http.ResponseWriter, r *http.Request) {
 	currentuser := user{r.FormValue("name"), r.FormValue("email")}
+	//INFORMATION BEING PASSED: currentuser
 	templates.ExecuteTemplate(w, "info.html", currentuser)
 }
